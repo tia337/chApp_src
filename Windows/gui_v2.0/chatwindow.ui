@@ -1,0 +1,343 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<ui version="4.0">
+ <class>ChatWindow</class>
+ <widget class="QMainWindow" name="ChatWindow">
+  <property name="geometry">
+   <rect>
+    <x>0</x>
+    <y>0</y>
+    <width>1030</width>
+    <height>795</height>
+   </rect>
+  </property>
+  <property name="windowTitle">
+   <string extracomment="by tia">chApp</string>
+  </property>
+  <widget class="QWidget" name="centralWidget">
+   <layout class="QGridLayout" name="gridLayout_2">
+    <item row="0" column="0">
+     <layout class="QGridLayout" name="gridLayout">
+      <item row="1" column="1">
+       <widget class="QPushButton" name="sendButton">
+        <property name="text">
+         <string>Send</string>
+        </property>
+       </widget>
+      </item>
+      <item row="1" column="0">
+       <layout class="QHBoxLayout" name="horizontalLayout_2">
+        <item>
+         <widget class="QLineEdit" name="messageInput">
+          <property name="placeholderText">
+           <string>Enter your message here</string>
+          </property>
+         </widget>
+        </item>
+       </layout>
+      </item>
+      <item row="0" column="0" colspan="2">
+       <layout class="QHBoxLayout" name="horizontalLayout" stretch="0,75">
+        <item>
+         <widget class="QTreeWidget" name="roomTree">
+          <column>
+           <property name="text">
+            <string/>
+           </property>
+          </column>
+         </widget>
+        </item>
+        <item>
+         <widget class="QTextBrowser" name="messageHistory">
+          <property name="font">
+           <font>
+            <family>Geeza Pro</family>
+            <pointsize>15</pointsize>
+           </font>
+          </property>
+          <property name="mouseTracking">
+           <bool>false</bool>
+          </property>
+          <property name="acceptDrops">
+           <bool>false</bool>
+          </property>
+          <property name="autoFillBackground">
+           <bool>true</bool>
+          </property>
+          <property name="acceptRichText">
+           <bool>false</bool>
+          </property>
+         </widget>
+        </item>
+       </layout>
+      </item>
+     </layout>
+    </item>
+   </layout>
+  </widget>
+  <widget class="QMenuBar" name="menuBar">
+   <property name="geometry">
+    <rect>
+     <x>0</x>
+     <y>0</y>
+     <width>1030</width>
+     <height>19</height>
+    </rect>
+   </property>
+   <widget class="QMenu" name="menuCustomize">
+    <property name="title">
+     <string>Customize</string>
+    </property>
+    <widget class="QMenu" name="menuChange_theme">
+     <property name="title">
+      <string>Change theme</string>
+     </property>
+     <addaction name="actionDark"/>
+     <addaction name="actionDefault"/>
+     <addaction name="actionchApp"/>
+     <addaction name="actionMonokai"/>
+     <addaction name="actionLight"/>
+     <addaction name="actionImage"/>
+     <addaction name="actionRadiance"/>
+    </widget>
+    <widget class="QMenu" name="menuChange_font">
+     <property name="title">
+      <string>Change font</string>
+     </property>
+     <widget class="QMenu" name="menuSize">
+      <property name="title">
+       <string>Size</string>
+      </property>
+      <addaction name="action13"/>
+      <addaction name="action15"/>
+      <addaction name="action20"/>
+      <addaction name="action25"/>
+     </widget>
+     <addaction name="menuSize"/>
+    </widget>
+    <widget class="QMenu" name="menuChange_smiley_size">
+     <property name="title">
+      <string>Change smiley size</string>
+     </property>
+     <addaction name="action13_2"/>
+     <addaction name="action15_2"/>
+     <addaction name="action20_2"/>
+     <addaction name="action25_2"/>
+    </widget>
+    <addaction name="menuChange_theme"/>
+    <addaction name="menuChange_font"/>
+    <addaction name="menuChange_smiley_size"/>
+   </widget>
+   <widget class="QMenu" name="menuHistory">
+    <property name="title">
+     <string>History</string>
+    </property>
+    <addaction name="actionLoad_history"/>
+   </widget>
+   <widget class="QMenu" name="menuMessage">
+    <property name="title">
+     <string>Message</string>
+    </property>
+    <addaction name="actionPrevious_message"/>
+   </widget>
+   <widget class="QMenu" name="menuLanguages">
+    <property name="title">
+     <string>Languages</string>
+    </property>
+    <addaction name="actionEnglish"/>
+    <addaction name="actionRussian"/>
+    <addaction name="actionUkrainian"/>
+   </widget>
+   <widget class="QMenu" name="menuAbout">
+    <property name="title">
+     <string>Info</string>
+    </property>
+    <addaction name="actionAbout"/>
+   </widget>
+   <addaction name="menuCustomize"/>
+   <addaction name="menuHistory"/>
+   <addaction name="menuMessage"/>
+   <addaction name="menuLanguages"/>
+   <addaction name="menuAbout"/>
+  </widget>
+  <widget class="QToolBar" name="mainToolBar">
+   <property name="iconSize">
+    <size>
+     <width>21</width>
+     <height>21</height>
+    </size>
+   </property>
+   <property name="floatable">
+    <bool>true</bool>
+   </property>
+   <attribute name="toolBarArea">
+    <enum>TopToolBarArea</enum>
+   </attribute>
+   <attribute name="toolBarBreak">
+    <bool>false</bool>
+   </attribute>
+   <addaction name="actionLoad_history"/>
+  </widget>
+  <widget class="QStatusBar" name="statusBar"/>
+  <action name="actionSetColorscheme">
+   <property name="checkable">
+    <bool>true</bool>
+   </property>
+   <property name="text">
+    <string>Change color</string>
+   </property>
+  </action>
+  <action name="actionDark">
+   <property name="text">
+    <string>Dark</string>
+   </property>
+  </action>
+  <action name="actionDefault">
+   <property name="text">
+    <string>Default</string>
+   </property>
+  </action>
+  <action name="actionChatty">
+   <property name="text">
+    <string>Chatty</string>
+   </property>
+  </action>
+  <action name="actionCezch">
+   <property name="text">
+    <string>Czech</string>
+   </property>
+  </action>
+  <action name="action13">
+   <property name="text">
+    <string>13</string>
+   </property>
+  </action>
+  <action name="action15">
+   <property name="text">
+    <string>15</string>
+   </property>
+  </action>
+  <action name="action20">
+   <property name="text">
+    <string>20</string>
+   </property>
+  </action>
+  <action name="action25">
+   <property name="text">
+    <string>25</string>
+   </property>
+  </action>
+  <action name="actionLoad_history">
+   <property name="icon">
+    <iconset resource="myResources.qrc">
+     <normaloff>:/image/image/envelope.png</normaloff>:/image/image/envelope.png</iconset>
+   </property>
+   <property name="text">
+    <string>Load history</string>
+   </property>
+   <property name="toolTip">
+    <string>Load one more day of history</string>
+   </property>
+  </action>
+  <action name="action13_2">
+   <property name="text">
+    <string>13</string>
+   </property>
+  </action>
+  <action name="action15_2">
+   <property name="text">
+    <string>15</string>
+   </property>
+  </action>
+  <action name="action20_2">
+   <property name="text">
+    <string>20</string>
+   </property>
+  </action>
+  <action name="action25_2">
+   <property name="text">
+    <string>25</string>
+   </property>
+  </action>
+  <action name="actionNiklas">
+   <property name="text">
+    <string>Nikki</string>
+   </property>
+  </action>
+  <action name="actionPrevious_message">
+   <property name="text">
+    <string>Insert previous message</string>
+   </property>
+   <property name="shortcut">
+    <string>Up</string>
+   </property>
+  </action>
+  <action name="actionNikki_Beach">
+   <property name="text">
+    <string>Nikki Beach</string>
+   </property>
+  </action>
+  <action name="actionShe_squats_bro">
+   <property name="text">
+    <string>They Squat Bro</string>
+   </property>
+  </action>
+  <action name="actionchApp">
+   <property name="text">
+    <string>chApp</string>
+   </property>
+  </action>
+  <action name="actionMonokai">
+   <property name="text">
+    <string>Monokai</string>
+   </property>
+  </action>
+  <action name="actionLight">
+   <property name="text">
+    <string>Light</string>
+   </property>
+  </action>
+  <action name="actionImage">
+   <property name="text">
+    <string>Image</string>
+   </property>
+  </action>
+  <action name="actionRadiance">
+   <property name="text">
+    <string>Radiance</string>
+   </property>
+  </action>
+  <action name="actionEnglish">
+   <property name="text">
+    <string>English</string>
+   </property>
+  </action>
+  <action name="actionRussian">
+   <property name="text">
+    <string>Russian</string>
+   </property>
+  </action>
+  <action name="actionUkrainian">
+   <property name="text">
+    <string>Ukrainian</string>
+   </property>
+  </action>
+  <action name="actionAbout">
+   <property name="text">
+    <string>About</string>
+   </property>
+  </action>
+  <action name="actionContact_Developer">
+   <property name="text">
+    <string>Contact Developer</string>
+   </property>
+  </action>
+ </widget>
+ <layoutdefault spacing="6" margin="11"/>
+ <tabstops>
+  <tabstop>messageHistory</tabstop>
+ </tabstops>
+ <resources>
+  <include location="myResources.qrc"/>
+ </resources>
+ <connections/>
+</ui>

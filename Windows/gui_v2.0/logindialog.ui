@@ -1,0 +1,134 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<ui version="4.0">
+ <class>LoginDialog</class>
+ <widget class="QDialog" name="LoginDialog">
+  <property name="windowModality">
+   <enum>Qt::ApplicationModal</enum>
+  </property>
+  <property name="geometry">
+   <rect>
+    <x>0</x>
+    <y>0</y>
+    <width>400</width>
+    <height>185</height>
+   </rect>
+  </property>
+  <property name="windowTitle">
+   <string>Login</string>
+  </property>
+  <property name="styleSheet">
+   <string notr="true"/>
+  </property>
+  <property name="modal">
+   <bool>true</bool>
+  </property>
+  <layout class="QGridLayout" name="gridLayout">
+   <item row="3" column="1">
+    <widget class="QDialogButtonBox" name="buttonBox">
+     <property name="styleSheet">
+      <string notr="true">QPushButton:hover{
+border-width: 0px;
+
+color: rgb(11, 11, 11);
+border-radius: 20%;
+
+}
+QPushButton {
+border: 2px solid #8f8f91;
+border-radius: 6px;
+
+background-color: rgb(245, 245, 245);
+min-width: 80px;
+font: 75  11pt &quot;Colibri&quot;;
+outline: none;
+}
+
+QPushButton:flat {
+border: red; 
+}
+
+QPushButton:default {
+border-color: green; 
+}</string>
+     </property>
+     <property name="orientation">
+      <enum>Qt::Horizontal</enum>
+     </property>
+     <property name="standardButtons">
+      <set>QDialogButtonBox::Cancel|QDialogButtonBox::Ok</set>
+     </property>
+    </widget>
+   </item>
+   <item row="0" column="1">
+    <layout class="QVBoxLayout" name="verticalLayout">
+     <item>
+      <widget class="QLineEdit" name="inputServer">
+       <property name="acceptDrops">
+        <bool>true</bool>
+       </property>
+       <property name="styleSheet">
+        <string notr="true">QLineEdit:focus#findPattern, QLineEdit:focus#findChange {
+    border-color: @focused-border-focus-color;
+    border-style: @focused-border-style;
+    border-width: @focused-border-width;
+}</string>
+       </property>
+       <property name="text">
+        <string/>
+       </property>
+       <property name="placeholderText">
+        <string/>
+       </property>
+      </widget>
+     </item>
+     <item>
+      <widget class="QLineEdit" name="inputName">
+       <property name="styleSheet">
+        <string notr="true">QLineEdit:focus#findPattern, QLineEdit:focus#findChange {
+    border-color: @focused-border-focus-color;
+    border-style: @focused-border-style;
+    border-width: @focused-border-width;
+}</string>
+       </property>
+      </widget>
+     </item>
+    </layout>
+   </item>
+   <item row="2" column="0" colspan="2">
+    <widget class="QLabel" name="errorMessage">
+     <property name="text">
+      <string/>
+     </property>
+    </widget>
+   </item>
+   <item row="0" column="0">
+    <layout class="QVBoxLayout" name="verticalLayout_2">
+     <item>
+      <widget class="QLabel" name="name">
+       <property name="text">
+        <string>Server adress:</string>
+       </property>
+      </widget>
+     </item>
+     <item>
+      <widget class="QLabel" name="adress">
+       <property name="styleSheet">
+        <string notr="true">font: 75  11pt &quot;Colibri&quot;;</string>
+       </property>
+       <property name="text">
+        <string>User name:</string>
+       </property>
+      </widget>
+     </item>
+    </layout>
+   </item>
+  </layout>
+ </widget>
+ <tabstops>
+  <tabstop>inputServer</tabstop>
+  <tabstop>inputName</tabstop>
+  <tabstop>buttonBox</tabstop>
+ </tabstops>
+ <resources/>
+ <connections/>
+</ui>

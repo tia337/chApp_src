@@ -1,0 +1,28 @@
+<RCC>
+    <qresource prefix="/files">
+        <file>smilies/happyface.png</file>
+        <file>smilies/oface.png</file>
+        <file>smilies/sadface.png</file>
+        <file>smilies/straightface.png</file>
+        <file>smilies/xdface.png</file>
+        <file>smilies/batman.png</file>
+        <file>smilies/grandpa.png</file>
+        <file>smilies/ironman.png</file>
+        <file>smilies/spiderman.png</file>
+        <file>smilies/astronaut.png</file>
+        <file>smilies/angry.png</file>
+        <file>smilies/pirate.png</file>
+    </qresource>
+    <qresource prefix="/">
+        <file>Translations/chApp_ru.qm</file>
+        <file>Translations/chApp_ua.qm</file>
+        <file>Translations/chApp_en.qm</file>
+    </qresource>
+    <qresource prefix="/image">
+        <file>image/envelope.png</file>
+    </qresource>
+    <qresource prefix="/sounds">
+        <file>wav/set.wav</file>
+        <file>wav/sms.wav</file>
+    </qresource>
+</RCC>
